@@ -14,10 +14,10 @@
 
 ### Встановлення залежностей
 
-mvn clean install -q 
+./mvnw clean install -q
 
 ### Запуск тестів 
 
-mvn clean test 
+./mvnw clean test
 
 ###Відео
