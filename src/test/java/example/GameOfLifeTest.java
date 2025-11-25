@@ -84,4 +84,10 @@ class GameOfLifeTest {
 
         assertArrayEquals(expectedAfter2, GameOfLife.evolve(initial, 2));
     }
+
+    @Test
+    void failingTestForDemo() {
+        assertEquals(1, 2);
+    }
+
 }
