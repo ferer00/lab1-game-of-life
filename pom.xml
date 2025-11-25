@@ -10,19 +10,13 @@
     <version>1.0.0</version>
 
     <properties>
-        <!-- Java 23 -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-
-        <!-- Кодування -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <!-- JUnit 5 -->
         <junit.jupiter.version>5.11.0</junit.jupiter.version>
     </properties>
 
     <dependencies>
-        <!-- JUnit 5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -44,6 +38,19 @@
                 </configuration>
             </plugin>
 
+            <!-- Плагін для створення запускного JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>example.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
 
         </plugins>
     </build>
